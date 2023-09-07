@@ -30,6 +30,11 @@ public class LinkedList
     }
     void insert(Node node)
     {
+        if(head == null)
+        {
+            head = node;
+            return;
+        }
         Node tail = head;
         while(tail.next != null)
         {
@@ -40,7 +45,6 @@ public class LinkedList
     void remove_tail()
     {
         Node tail = head;
-        Node new_tail;
         while(tail.next != null)
         {
             if (tail.next.next == null)
